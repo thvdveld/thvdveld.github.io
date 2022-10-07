@@ -44,3 +44,4 @@ gem 'jekyll-minifier'
 
 gem 'jekyll-loading-lazy'
 
+gem 'jekyll-spaceship', group: :jekyll_plugins
