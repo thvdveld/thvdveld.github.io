@@ -4,20 +4,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦀</text></svg>"><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Academia | Thibaut Vandervelden (thvdveld)</title>
+<title>Academia 🎓 | Thibaut Vandervelden (thvdveld)</title>
 <meta name="generator" content="Jekyll v4.2.2" />
-<meta property="og:title" content="Academia" />
+<meta property="og:title" content="Academia 🎓" />
 <meta property="og:locale" content="en_US" />
 <link rel="canonical" href="http://localhost:4000/academia/" />
 <meta property="og:url" content="http://localhost:4000/academia/" />
 <meta property="og:site_name" content="Thibaut Vandervelden (thvdveld)" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Academia" />
+<meta property="twitter:title" content="Academia 🎓" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","headline":"Academia","url":"http://localhost:4000/academia/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","headline":"Academia 🎓","url":"http://localhost:4000/academia/"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Thibaut Vandervelden (thvdveld)" /><link rel="stylesheet" href="/prism.css">
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Thibaut Vandervelden (thvdveld)" /><link rel="stylesheet" href="/extra.css">
+  <link rel="stylesheet" href="/prism.css">
       <!-- for mathjax support -->
     
       <script type="text/x-mathjax-config">
@@ -40,7 +41,7 @@
           </span>
         </label>
 
-        <div class="trigger"><a class="page-link" href="/academia/">Academia</a></div>
+        <div class="trigger"><a class="page-link" href="/academia/">Academia 🎓</a></div>
       </nav></div>
 </header>
 <main class="page-content" aria-label="Content">
@@ -48,11 +49,19 @@
         <article class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Academia</h1>
+    <h1 class="post-title">Academia 🎓</h1>
   </header>
 
   <div class="post-content">
-    <h2 id="publications">Publications</h2>
+    <p class="text-justify">I’m a PhD student from the <a href="http://www.etrovub.be/">ETRO department</a> at the <a href="https://www.vub.be/en">Vrije Universiteit Brussel</a> in Belgium.
+Our research group, Smartnets, is specialized in Wireless Sensors and Actuator Networks (WSAN) protocols and applications.
+I focus on the performance of protocols used in Low-Power Wireless Personal Area Networks.</p>
+
+<p class="text-justify">Our research group uses the <a href="https://github.com/contiki-ng/contiki-ng">Contiki-NG</a> operating system to test communication protocols.
+However, in 2015, the first official version of the <a href="https://www.rust-lang.org/">Rust</a> programming language 🦀 was released.
+Therefore, I implemented the <a href="https://www.rfc-editor.org/rfc/rfc6282">6LoWPAN</a> IPv6 stack in Rust and added it to the <a href="https://github.com/smoltcp-rs/smoltcp">smoltcp</a> crate.</p>
+
+<h2 id="publications">Publications</h2>
 
 <h3><a href="http://dx.doi.org/10.1016/j.future.2021.09.042">SHA3 and Keccak Variants Computation Speeds on Constrained Devices (2022)</a></h3>
 
@@ -61,15 +70,15 @@
   </blockquote>
 
 <h4><i>Abstract</i></h4>
-<p>In 2015, the National Institute of Standards and Technology (NIST) announced Keccak as the new primitive to be used in SHA 3, not replacing but complementing SHA 2.
+<p class="text-justify">In 2015, the National Institute of Standards and Technology (NIST) announced Keccak as the new primitive to be used in SHA 3, not replacing but complementing SHA 2.
 The Keccak primitive, based on a sponge construction, has flexible parameters that can be controlled by the user to fit the needs of the application.
 However, the SHA 3 standard constrains and predefines the Keccak parameters to be used and thus making its use less flexible.</p>
 
-<p>In this paper we try to understand the influence of these parameters with respect to memory size and throughput, specifically for constrained devices used in the Internet of Things (IoT) where speed and efficiency is important.
+<p class="text-justify">In this paper we try to understand the influence of these parameters with respect to memory size and throughput, specifically for constrained devices used in the Internet of Things (IoT) where speed and efficiency is important.
 Apart from evaluations of the code on real devices, a mathematical model is also presented which helps predicting the performance of the Keccak primitive.
 We also compare the standard functions from SHA 2 with SHA 3 on different platforms.</p>
 
-<p>All implementations of SHA 2, SHA 3 and Keccak are purely written in Rust, since Rust guarantees safe memory manipulation whilst having the same performance as C.
+<p class="text-justify">All implementations of SHA 2, SHA 3 and Keccak are purely written in Rust, since Rust guarantees safe memory manipulation whilst having the same performance as C.
 Our measurements show that for the software implementations SHA 2 is always faster than SHA 3 on all tested platforms.
 When only looking at the Keccak construction, Keccak-\(f[800]\) always outperforms other permutations based on Keccak-\(f\) when the capacity \(c\) stays below 276 bits.
 In addition, Keccak-\(f[800]\) has the added advantage of using less flash memory on 32-bit platforms.</p>
@@ -83,7 +92,7 @@ In addition, Keccak-\(f[800]\) has the added advantage of using less flash memor
   </blockquote>
 
 <h4><i>Abstract</i></h4>
-<p>Driven by the increased consciousness in data ownership and privacy, zero-knowledge proofs (ZKPs) have become a popular tool to convince a third party of the truthfulness of a statement without disclosing any further information.
+<p class="text-justify">Driven by the increased consciousness in data ownership and privacy, zero-knowledge proofs (ZKPs) have become a popular tool to convince a third party of the truthfulness of a statement without disclosing any further information.
 As ZKPs are rather complex to design, frameworks that transform high-level languages into ZKPs have been proposed.
 We propose Circuitree, a Datalog reasoner in zero-knowledge.
 Datalog is a high-level declarative logic language that is generally used for querying.
@@ -103,7 +112,7 @@ First results show that our approach allows for fast proofs and proof verificati
   </blockquote>
 
 <h4><i>Abstract</i></h4>
-<p>To enable today’s industrial automation, a significant number of sensors and actuators are required.
+<p class="text-justify">To enable today’s industrial automation, a significant number of sensors and actuators are required.
 In order to obtain trust and isolate faults in the data collected by this network, protection against authenticity fraud and nonrepudiation is essential.
 In this paper, we propose a very efficient symmetric-key-based security mechanism to establish authentication and nonrepudiation among all the nodes including the gateway in a distributed cooperative network, without communicating additional security parameters to establish different types of session keys.
 The solution also offers confidentiality and anonymity in case there are no malicious nodes.
