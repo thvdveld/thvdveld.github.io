@@ -36,8 +36,6 @@ gem "webrick", "~> 1.7"
 
 gem 'jekyll-scholar', group: :jekyll_plugins
 
-gem "minimal-mistakes-jekyll"
-
 gem 'jekyll-sitemap'
 
 gem 'jekyll-minifier'
