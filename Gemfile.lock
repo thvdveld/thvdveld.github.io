@@ -127,6 +127,7 @@ DEPENDENCIES
   jekyll-loading-lazy
   jekyll-minifier
   jekyll-scholar
+  jekyll-seo-tag
   jekyll-sitemap
   jekyll-spaceship
   mini_racer
