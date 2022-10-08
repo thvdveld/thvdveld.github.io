@@ -41,6 +41,8 @@ plugins:
   - jekyll-minifier
   - jekyll-loading-lazy
   - jekyll-spaceship
+  - jekyll-seo-tag
+
 markdown: kramdown
 
 scholar:
