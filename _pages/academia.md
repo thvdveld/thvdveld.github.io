@@ -1,5 +1,6 @@
 ---
-layout: page
+layout: single
+classes: wide
 title: Academia 🎓
 permalink: /academia/
 usemathjax: true
@@ -27,16 +28,12 @@ Therefore, I implemented the [6LoWPAN][6lowpan] IPv6 stack in Rust and added it 
 {% for publication in site.publications %}
   <h3><a href="http://dx.doi.org/{{ publication.doi }}">{{ publication.title }}</a></h3>
   
-  <blockquote>
+  <div class="notice">
   {{ publication.authors }}
-  </blockquote>
+  </div>
 
   <h4><i>Abstract</i></h4>
   {{ publication.content | markdownify }}
 
   DOI: <a href="http://dx.doi.org/{{ publication.doi }}">{{ publication.doi }}</a> to {{ publication.doi_to }}
 {% endfor %}
-
-<!------->
-
-<!--## Master Thesis Supervision-->

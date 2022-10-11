@@ -33,8 +33,9 @@ github_username:  thvdveld
 #researchgate_resume: https://www.researchgate.net/profile/Thibaut-Vandervelden-2
 
 # Build settings
-theme: minima
-#theme: minimal-mistakes-jekyll
+#theme: minima
+theme: minimal-mistakes-jekyll
+#minimal_mistakes_skin: "air"
 plugins:
   - 'jekyll/scholar'
   - jekyll-sitemap
@@ -73,3 +74,25 @@ highlighter: none
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+include:
+  - _data
+  - _pages
+
+atom_feed:
+  hide: true
+
+footer:
+  links:
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/thibautvandv"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/thvdveld"
+    - label: "GitLab"
+      icon: "fab fa-fw fa-gitlab"
+      url: "https://gitlab.com/thvdveld"
+    - label: "Researchgate"
+      icon: "fab fa-fw fa-researchgate"
+      url: "https://www.researchgate.net/profile/Thibaut-Vandervelden-2"

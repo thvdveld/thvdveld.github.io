@@ -49,3 +49,5 @@ gem "mini_racer"
 gem "jekyll-seo-tag"
 
 gem 'jekyll-compose', group: [:jekyll_plugins]
+
+gem "minimal-mistakes-jekyll"
