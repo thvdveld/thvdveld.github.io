@@ -1,9 +1,10 @@
 ---
 layout: home
+class: wide
 author_profile: true
 author: Thibaut Vandervelden
 --- 
 
-## No blog posts yet!
-
-I invite you to take a look at my [Software 💻](/software) or [Academia 🎓](/academia) page.
+Information about myself at [Software](/software) or [Academia](/academia).
+I occasionally will share things that I find interesting.
+{: .text-justify}
