@@ -1,5 +1,7 @@
 ---
 layout: home
+author_profile: true
+author: Thibaut Vandervelden
 --- 
 
 ## No blog posts yet!

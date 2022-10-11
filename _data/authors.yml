@@ -1,6 +1,6 @@
 Thibaut Vandervelden:
   name        : "Thibaut Vandervelden"
-  bio         : "What do you want, jewels? I am a very extravagant man."
+  #bio         : "What do you want, jewels? I am a very extravagant man."
   avatar      : "/assets/thvdveld.jpg"
   links:
     - label: "thvdveld@vub.be"

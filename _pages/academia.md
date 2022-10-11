@@ -3,7 +3,7 @@ layout: single
 classes: wide
 title: Academia 🎓
 permalink: /academia/
-usemathjax: true
+mathjax: true
 ---
 
 I'm a PhD student from the [ETRO department][etro] at the [Vrije Universiteit Brussel][vub] in Belgium.
@@ -12,7 +12,7 @@ I focus on the performance of protocols used in Low-Power Wireless Personal Area
 {: .text-justify}
 
 Our research group uses the [Contiki-NG][contiking] operating system to test communication protocols.
-However, in 2015, the first official version of the [Rust][rust] programming language 🦀 was released.
+However, in 2015, the first official version of the [Rust][rust] <i class="fa-brands fa-rust"></i> programming language  was released.
 Therefore, I implemented the [6LoWPAN][6lowpan] IPv6 stack in Rust and added it to the [smoltcp][smoltcp] crate.
 {: .text-justify}
 
