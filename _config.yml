@@ -34,9 +34,12 @@ github_username:  thvdveld
 
 # Build settings
 #theme: minima
-theme: minimal-mistakes-jekyll
+#theme: minimal-mistakes-jekyll
+remote_theme: https://github.com/mmistakes/minimal-mistakes
 #minimal_mistakes_skin: "air"
 plugins:
+  - jekyll-include-cache
+  - jekyll-remote-theme
   - 'jekyll/scholar'
   - jekyll-sitemap
   - jekyll-minifier
