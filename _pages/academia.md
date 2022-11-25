@@ -23,6 +23,14 @@ Therefore, I implemented the [6LoWPAN][6lowpan] IPv6 stack in Rust and added it 
 [6lowpan]: https://www.rfc-editor.org/rfc/rfc6282
 [smoltcp]: https://github.com/smoltcp-rs/smoltcp
 
+## Current projects
+
+### RustIEC
+
+Currently participating in the RustIEC VLAIO TETRA project.
+The goal of the project is to teach Flanders' companies to be proficient in the Rust programming language.
+More information about the project can be found [here](https://en.rustiec.be).
+
 ## Publications
 
 {% for publication in site.publications %}
