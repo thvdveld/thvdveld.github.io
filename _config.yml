@@ -36,7 +36,7 @@ github_username:  thvdveld
 #theme: minima
 #theme: minimal-mistakes-jekyll
 remote_theme: https://github.com/mmistakes/minimal-mistakes
-#minimal_mistakes_skin: "dirt"
+minimal_mistakes_skin: "dark"
 plugins:
   - jekyll-remote-theme
   - 'jekyll/scholar'
