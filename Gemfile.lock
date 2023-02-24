@@ -54,6 +54,8 @@ GEM
       jekyll (>= 3.7, < 5.0)
     jekyll-gist (1.5.0)
       octokit (~> 4.2)
+    jekyll-gzip (2.5.1)
+      jekyll (>= 3.0, < 5.0)
     jekyll-include-cache (0.2.1)
       jekyll (>= 3.7, < 5.0)
     jekyll-loading-lazy (0.1.1)
@@ -145,6 +147,7 @@ DEPENDENCIES
   jekyll (~> 4.2.2)
   jekyll-compose
   jekyll-feed (~> 0.12)
+  jekyll-gzip
   jekyll-include-cache
   jekyll-loading-lazy
   jekyll-minifier

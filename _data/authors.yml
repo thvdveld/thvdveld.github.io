@@ -1,7 +1,7 @@
 Thibaut Vandervelden:
   name        : "Thibaut Vandervelden"
   #bio         : "What do you want, jewels? I am a very extravagant man."
-  avatar      : "/assets/thvdveld.jpg"
+  avatar      : "/assets/thvdveld_small.webp"
   links:
     - label: "thvdveld@vub.be"
       icon: "fas fa-fw fa-envelope-square"

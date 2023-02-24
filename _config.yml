@@ -38,6 +38,7 @@ github_username:  thvdveld
 remote_theme: https://github.com/mmistakes/minimal-mistakes
 minimal_mistakes_skin: "dark"
 plugins:
+  - jekyll-gzip
   - jekyll-remote-theme
   - 'jekyll/scholar'
   - jekyll-sitemap
