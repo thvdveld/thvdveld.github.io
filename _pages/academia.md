@@ -31,6 +31,12 @@ Currently participating in the RustIEC VLAIO TETRA project.
 The goal of the project is to teach Flanders' companies to be proficient in the Rust programming language.
 More information about the project can be found [here](https://en.rustiec.be).
 
+### NLnet: add support for RPL in smoltcp
+
+In this project I'm adding the Routing Protocol for Low-power and lossy networks (RPL)
+to the [smoltcp] library.
+More information about the project can be found [here](https://nlnet.nl/project/Smoltcp/).
+
 ## Publications
 
 {% for publication in site.publications %}
