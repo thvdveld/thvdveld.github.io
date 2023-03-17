@@ -1,0 +1,1 @@
+{"rule":"EN_UPPER_CASE_NGRAM","sentence":"^\\QThe standard was first defined in 2003 and is now used as a basis for many other standards, such as Zigbee, Thread and 6LoWPAN.\\E$"}

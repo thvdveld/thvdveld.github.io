@@ -1,0 +1,7 @@
+main:
+  - title: "Posts 📝"
+    url: /posts/
+  - title: "Software 💻"
+    url: /software/
+  - title: "Academia 🎓"
+    url: /academia/
