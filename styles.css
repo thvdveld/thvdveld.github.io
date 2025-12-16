@@ -73,7 +73,7 @@ a {
         width: 100%;
         flex-direction: row;
         justify-content: space-around; } }
-    @media (max-width: 800px) {
+    @media (max-width: 1000px) {
       #card #portrait {
         width: 100%;
         flex-direction: column;
