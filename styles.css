@@ -1,6 +1,7 @@
 body {
-  font: 120% "Gentium Plus", serif;
-  font-family: "TX-02"; }
+  font: 100% "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-style: normal; }
 
 h1, h2, h3 {
   font-family: "Roboto Condensed"; }
@@ -109,10 +110,7 @@ a {
       line-height: 1.5em;
       margin-bottom: 1em; }
     #card #info button {
-      display: block;
       background-color: white;
-      width: auto;
-      margin: 0 auto;
       color: #778873;
       border: 2px solid #778873;
       padding: 10px 10px;
@@ -122,7 +120,7 @@ a {
       transition-timing-function: ease-in-out;
       margin-bottom: 1em;
       font-variant: small-caps;
-      font-family: "TX-02"; }
+      font-family: "Roboto Mono", monospace; }
       #card #info button:hover {
         background-color: #f1f3e0; }
     #card #info #portrait-links {
