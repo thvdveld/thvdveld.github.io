@@ -1,194 +1,208 @@
-$color1: #778873
-$color2: #a1bc98
-$color3: #d2dcb6
-$color4: #f1f3e0
+// -----------------------------
+// Dark Neumorphism Variables
+// -----------------------------
+$bg: #1c2027
+$surface: #1c2027
+$light-shadow: rgba(255, 255, 255, 0.06)
+$dark-shadow: rgba(0, 0, 0, 0.55)
+$text: rgba(255, 255, 255, 0.88)
+$muted: rgba(255, 255, 255, 0.72)
+$accent: #9fb3a0
+$radius: 20px
 
-$accent-color: #ff6f61
+// Breakpoints
+$tablet: 900px
+$mobile: 600px
 
-body
-  font: 120% "Gentium Plus", serif
-  // font: 100% "Roboto Mono", serif
-  font-style: normal
-  font-optical-sizing: auto
+// -----------------------------
+// Mixins
+// -----------------------------
+=neumorph($inset: false)
+  @if $inset
+    box-shadow: inset 8px 8px 16px $dark-shadow, inset -8px -8px 16px $light-shadow
+  @else
+    box-shadow: 8px 8px 16px $dark-shadow, -8px -8px 16px $light-shadow
 
-  @media (max-width: 420px)
-    font-weight: 200
+=neumorph-hover
+  box-shadow: 4px 4px 10px $dark-shadow, -4px -4px 10px $light-shadow
 
-h1, h2, h3
-  font-family: "Roboto Condensed"
+=neumorph-pressed
+  box-shadow: inset 6px 6px 12px $dark-shadow, inset -6px -6px 12px $light-shadow
 
-h3
-  font-weight: 500
+// -----------------------------
+// Global Styles
+// -----------------------------
+*
+  box-sizing: border-box
 
-strong 
-  text-decoration: underline
+html, body
+  margin: 0
+  padding: 0
+  font-family: "Source Serif 4", serif
+  background: $bg
+  color: $text
 
 a
-  color: $color1
-  text-decoration: underline
-  transition: color 0.2s
+  color: $accent
+  text-decoration: none
 
   &:hover
-    color: $color3
+    text-decoration: underline
 
-hr
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1em 0;
-  padding: 0;
+p
+  color: $muted
 
+// -----------------------------
+// Background
+// -----------------------------
 #leftbackground
-  width: 50%
-  height: 100vh
-  background: linear-gradient(-45deg, $color1, $color3)
   position: fixed
-  top: 0
-  left: 0
+  inset: 0
+  background: linear-gradient(135deg, lighten($bg, 2%), darken($bg, 4%))
   z-index: -1
 
-  @media (max-width: 1200px)
-    width: 100%
-
-  @media (max-width: 1000px)
-    display: none
-
+// -----------------------------
+// Main Card
+// -----------------------------
 #card
-  width: 70%
+  max-width: 960px
+  margin: 4rem auto
+  padding: 2.5rem
+  background: $surface
+  border-radius: $radius
+  +neumorph
 
-  margin: 0 auto
-  box-shadow: 32px 48px 64px rgba(0,0,0,0.4)
+// -----------------------------
+// Portrait Section
+// -----------------------------
+#portrait
+  text-align: center
+  margin-bottom: 2rem
 
-  position: absolute
-  top: 50%
-  left: 50%
-  transform: translate(-50%,-50%)
+  img
+    width: 160px
+    height: 160px
+    object-fit: cover
+    border-radius: 50%
+    background: $surface
+    padding: 8px
+    +neumorph
 
+  h1
+    margin-top: 1rem
+    font-family: "Gentium Plus", serif
+    font-weight: 700
+    color: $text
+
+// -----------------------------
+// Content
+// -----------------------------
+#info
+  #content
+    h1, h2, h3
+      font-family: "Roboto Condensed", sans-serif
+      margin-top: 1.8rem
+      color: $text
+
+    strong
+      color: rgba(255, 255, 255, 0.93)
+
+    ul
+      padding-left: 1.2rem
+
+      li
+        margin-bottom: 0.4rem
+        color: $muted
+
+// -----------------------------
+// Button
+// -----------------------------
+button
+  margin-top: 2rem
+  padding: 0.8rem 1.6rem
+  border: none
+  border-radius: $radius
+  background: $surface
+  font-family: "Roboto Condensed", sans-serif
+  font-size: 1rem
+  cursor: pointer
+  color: $text
+  +neumorph
+  transition: all 0.2s ease
+
+  &:hover
+    +neumorph-hover
+
+  &:active
+    +neumorph-pressed
+
+// -----------------------------
+// Divider
+// -----------------------------
+hr
+  margin: 2rem 0
+  border: none
+  height: 2px
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.10), transparent)
+
+// -----------------------------
+// Contact Links
+// -----------------------------
+#portrait-links
   display: flex
-  flex-direction: row
-  align-items: top
+  gap: 1rem
+  justify-content: center
+  margin-top: 1.5rem
 
-  @media (max-width: 1600px)
-    width: 80%
-
-  @media (max-width: 1400px)
-    flex-direction: column
-    width: 60%
-
-  @media (max-width: 1000px)
-    top: 0
-    left: 0
-    transform: none
-    width: 100%
-    box-shadow: none
-  
-  #portrait
-    width: 35%
-    padding: 50px
-    box-sizing: border-box
+  a
+    width: 44px
+    height: 44px
     display: flex
-    flex-direction: column
     align-items: center
-    background: linear-gradient(-45deg, $color3, $color4)
+    justify-content: center
+    border-radius: 50%
+    background: $surface
+    font-size: 1.2rem
+    +neumorph
+    transition: all 0.2s ease
 
-    @media (max-width: 1400px)
-      width: 100%
-      flex-direction: row
-      justify-content: space-around
+    &:hover
+      +neumorph-hover
 
-    @media (max-width: 800px), (max-device-width: 960px)
-      width: 100%
-      flex-direction: column
-      justify-content: space-around
-      padding: 20px
+    &:active
+      +neumorph-pressed
 
-    // Small caps, thin
-    h1
-      padding: 30px
-      font-family: "Roboto Condensed"
-      text-align: center
-      font-variant: small-caps
-      font-weight: 100
-      font-size: 3.5em
+// Optional: make icons a bit clearer on dark backgrounds
+// (Font Awesome SVGs inherit currentColor through spans)
+#portrait-links span
+  filter: saturate(1.1) brightness(1.05)
 
-      @media (max-width: 600px)
-        padding: 0px
-        font-size: 2em
+// -----------------------------
+// Responsive Design
+// -----------------------------
+@media (max-width: $tablet)
+  #card
+    margin: 2rem 1.5rem
+    padding: 2rem
 
-    // Rounded corners for the portrait image
-    // In the middle of the parent
-    img
-      border-radius: 50%
-      display: block
-      margin: 0 auto
-      width: 75%
-      box-shadow: 8px 8px 16px rgba(0,0,0,0.3)
+@media (max-width: $mobile)
+  #card
+    margin: 1.5rem 1rem
+    padding: 1.5rem
 
-      @media (max-width: 1200px)
-        width: 50%
-        min-width: 150px
+  #portrait img
+    width: 120px
+    height: 120px
 
-  // Info right of the portrait
-  #info
-    padding: 30px
-    background-color: white
-    width: 60%
+  #info #content h1
+    font-size: 1.5rem
 
-    // Push links to the bottom
-    display: flex
-    flex-direction: column
-    box-sizing: border-box
-    justify-content: space-between
+  #info #content h2
+    font-size: 1.25rem
 
-    @media (max-width: 1400px)
-      width: 100%
-      box-sizing: border-box
+  #portrait-links
+    gap: 0.75rem
 
-    #content
-      h1
-        margin-top: 0
-        margin-bottom: 0
-        font: 100% "Roboto Condensed", monospace
-        font-size: 5em
-        font-weight: 600
-      
-        @media (max-width: 600px)
-          padding: 0px
-          font-size: 3em
-
-      p
-        line-height: 1.5em
-        margin-bottom: 1em
-
-    // Centered button below the paragraph
-    button
-      // display: block
-      background-color: white
-      // width: auto
-      // max-width: 300px
-      color: $color1
-      border: 2px solid $color1
-      padding: 10px 10px
-      font-size: 1.2em
-      cursor: pointer
-      transition: background-color 0.3s
-      transition-timing-function: ease-in-out
-      margin-bottom: 1em
-      font-family: "Roboto Mono", monospace
-
-      &:hover
-        background-color: $color4
-
-    // Links to social media profiles underneath the portrait
-    // They are centered horizontally and are <i> 
-    // href when clicked should not have a different color
-    #portrait-links
-      background-color: white
-      text-align: center
-
-      a
-        margin: 0 20px
-        color: inherit
-        text-decoration: none
-        font-size: 1.5em
+  button
+    width: 100%
+    text-align: center
