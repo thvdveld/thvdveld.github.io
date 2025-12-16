@@ -6,9 +6,12 @@ $color4: #f1f3e0
 $accent-color: #ff6f61
 
 body
-  font: 100% "Roboto Mono", monospace
+  font: "Roboto Mono", monospace
   font-optical-sizing: auto
   font-style: normal
+
+  @media (max-width: 420px)
+    font-weight: 200
 
 h1, h2, h3
   font-family: "Roboto Condensed"
@@ -85,6 +88,12 @@ a
       flex-direction: row
       justify-content: space-around
 
+    @media (max-width: 800px)
+      width: 100%
+      flex-direction: column
+      justify-content: space-around
+      padding: 20px
+
     // Small caps, thin
     h1
       padding: 30px
@@ -93,6 +102,10 @@ a
       font-variant: small-caps
       font-weight: 100
       font-size: 3.5em
+
+      @media (max-width: 600px)
+        padding: 0px
+        font-size: 2em
 
     // Rounded corners for the portrait image
     // In the middle of the parent
@@ -130,6 +143,10 @@ a
         font: 100% "Roboto Condensed"
         font-size: 5em
         font-weight: 600
+      
+        @media (max-width: 600px)
+          padding: 0px
+          font-size: 3em
 
       p
         line-height: 1.5em
