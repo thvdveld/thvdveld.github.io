@@ -1,13 +1,24 @@
 // -----------------------------
-// Dark Neumorphism Variables
+// Light Neumorphism Color System
 // -----------------------------
-$bg: #1c2027
-$surface: #1c2027
-$light-shadow: rgba(255, 255, 255, 0.06)
-$dark-shadow: rgba(0, 0, 0, 0.55)
-$text: rgba(255, 255, 255, 0.88)
-$muted: rgba(255, 255, 255, 0.72)
-$accent: #9fb3a0
+$bg: #eef1f6
+$surface: #eef1f6
+
+// Shadows
+$light-shadow: rgba(255, 255, 255, 0.9)
+$dark-shadow: rgba(0, 0, 0, 0.12)
+
+// Text
+$text-main: #2b2f33
+$text-muted: #555b63
+
+// Accent palette
+$accent-primary: #778873   // sage green (identity)
+$accent-secondary: #5f7ea8 // soft blue
+$accent-tertiary: #a87c5a  // warm brown
+$accent-info: #4e9a94      // teal
+$accent-warning: #c49a4f   // muted gold
+
 $radius: 20px
 
 // Breakpoints
@@ -19,15 +30,15 @@ $mobile: 600px
 // -----------------------------
 =neumorph($inset: false)
   @if $inset
-    box-shadow: inset 8px 8px 16px $dark-shadow, inset -8px -8px 16px $light-shadow
+    box-shadow: inset 6px 6px 12px $dark-shadow, inset -6px -6px 12px $light-shadow
   @else
-    box-shadow: 8px 8px 16px $dark-shadow, -8px -8px 16px $light-shadow
+    box-shadow: 6px 6px 12px $dark-shadow, -6px -6px 12px $light-shadow
 
 =neumorph-hover
-  box-shadow: 4px 4px 10px $dark-shadow, -4px -4px 10px $light-shadow
+  box-shadow: 3px 3px 6px $dark-shadow, -3px -3px 6px $light-shadow
 
 =neumorph-pressed
-  box-shadow: inset 6px 6px 12px $dark-shadow, inset -6px -6px 12px $light-shadow
+  box-shadow: inset 4px 4px 8px $dark-shadow, inset -4px -4px 8px $light-shadow
 
 // -----------------------------
 // Global Styles
@@ -38,19 +49,26 @@ $mobile: 600px
 html, body
   margin: 0
   padding: 0
-  font-family: "Source Serif 4", serif
+  font-family: "JetBrains Mono", serif
   background: $bg
-  color: $text
+  color: $text-main
 
 a
-  color: $accent
+  color: $accent-warning
   text-decoration: none
+  transition: color 0.1s
 
   &:hover
+    color: darken($accent-secondary, 8%)
     text-decoration: underline
 
 p
-  color: $muted
+  color: $text-muted
+  line-height: 1.7
+
+strong
+  color: $accent-secondary
+  font-weight: 600
 
 // -----------------------------
 // Background
@@ -58,7 +76,7 @@ p
 #leftbackground
   position: fixed
   inset: 0
-  background: linear-gradient(135deg, lighten($bg, 2%), darken($bg, 4%))
+  background: linear-gradient(135deg, lighten($bg, 2%), darken($bg, 3%))
   z-index: -1
 
 // -----------------------------
@@ -80,8 +98,8 @@ p
   margin-bottom: 2rem
 
   img
-    width: 160px
-    height: 160px
+    width: 200px
+    height: 200px
     object-fit: cover
     border-radius: 50%
     background: $surface
@@ -90,47 +108,53 @@ p
 
   h1
     margin-top: 1rem
-    font-family: "Gentium Plus", serif
-    font-weight: 700
-    color: $text
+    font-family: "Roboto Condensed", serif
+    font-weight: 200
 
 // -----------------------------
 // Content
 // -----------------------------
 #info
   #content
-    h1, h2, h3
+    h1
       font-family: "Roboto Condensed", sans-serif
-      margin-top: 1.8rem
-      color: $text
 
-    strong
-      color: rgba(255, 255, 255, 0.93)
+    h2
+      font-family: "Roboto Condensed", sans-serif
+
+    h3
+      font-family: "Roboto Condensed", sans-serif
+      color: $text-muted
 
     ul
       padding-left: 1.2rem
 
       li
-        margin-bottom: 0.4rem
-        color: $muted
+        margin-bottom: 0.5rem
+        color: $text-muted
+
+        &::marker
+          color: $accent-warning
 
 // -----------------------------
 // Button
 // -----------------------------
 button
   margin-top: 2rem
-  padding: 0.8rem 1.6rem
+  padding: 0.9rem 1.8rem
   border: none
   border-radius: $radius
   background: $surface
   font-family: "Roboto Condensed", sans-serif
   font-size: 1rem
   cursor: pointer
-  color: $text
+  color: $text-muted
+  letter-spacing: 0.05em
   +neumorph
   transition: all 0.2s ease
 
   &:hover
+    color: darken($accent-secondary, 10%)
     +neumorph-hover
 
   &:active
@@ -143,7 +167,7 @@ hr
   margin: 2rem 0
   border: none
   height: 2px
-  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.10), transparent)
+  background: linear-gradient(to right, transparent, rgba(119, 136, 115, 0.45), transparent)
 
 // -----------------------------
 // Contact Links
@@ -163,19 +187,16 @@ hr
     border-radius: 50%
     background: $surface
     font-size: 1.2rem
+    color: $accent-secondary
     +neumorph
     transition: all 0.2s ease
 
     &:hover
+      color: $accent-info
       +neumorph-hover
 
     &:active
       +neumorph-pressed
-
-// Optional: make icons a bit clearer on dark backgrounds
-// (Font Awesome SVGs inherit currentColor through spans)
-#portrait-links span
-  filter: saturate(1.1) brightness(1.05)
 
 // -----------------------------
 // Responsive Design
@@ -194,15 +215,8 @@ hr
     width: 120px
     height: 120px
 
-  #info #content h1
-    font-size: 1.5rem
-
-  #info #content h2
-    font-size: 1.25rem
-
   #portrait-links
     gap: 0.75rem
 
   button
     width: 100%
-    text-align: center

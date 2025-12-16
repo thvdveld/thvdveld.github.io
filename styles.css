@@ -4,86 +4,98 @@
 html, body {
   margin: 0;
   padding: 0;
-  font-family: "Source Serif 4", serif;
-  background: #1c2027;
-  color: rgba(255, 255, 255, 0.88); }
+  font-family: "JetBrains Mono", serif;
+  background: #eef1f6;
+  color: #2b2f33; }
 
 a {
-  color: #9fb3a0;
-  text-decoration: none; }
+  color: #c49a4f;
+  text-decoration: none;
+  transition: color 0.1s; }
   a:hover {
+    color: #4e6a90;
     text-decoration: underline; }
 
 p {
-  color: rgba(255, 255, 255, 0.72); }
+  color: #555b63;
+  line-height: 1.7; }
+
+strong {
+  color: #5f7ea8;
+  font-weight: 600; }
 
 #leftbackground {
   position: fixed;
   inset: 0;
-  background: linear-gradient(135deg, #20252d, #13161b);
+  background: linear-gradient(135deg, #f5f6fa, #e4e9f1);
   z-index: -1; }
 
 #card {
   max-width: 960px;
   margin: 4rem auto;
   padding: 2.5rem;
-  background: #1c2027;
+  background: #eef1f6;
   border-radius: 20px;
-  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.55), -8px -8px 16px rgba(255, 255, 255, 0.06); }
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.12), -6px -6px 12px rgba(255, 255, 255, 0.9); }
 
 #portrait {
   text-align: center;
   margin-bottom: 2rem; }
   #portrait img {
-    width: 160px;
-    height: 160px;
+    width: 200px;
+    height: 200px;
     object-fit: cover;
     border-radius: 50%;
-    background: #1c2027;
+    background: #eef1f6;
     padding: 8px;
-    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.55), -8px -8px 16px rgba(255, 255, 255, 0.06); }
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.12), -6px -6px 12px rgba(255, 255, 255, 0.9); }
   #portrait h1 {
     margin-top: 1rem;
-    font-family: "Gentium Plus", serif;
-    font-weight: 700;
-    color: rgba(255, 255, 255, 0.88); }
+    font-family: "Roboto Condensed", serif;
+    font-weight: 200; }
 
-#info #content h1, #info #content h2, #info #content h3 {
+#info #content h1 {
+  font-family: "Roboto Condensed", sans-serif; }
+
+#info #content h2 {
+  font-family: "Roboto Condensed", sans-serif; }
+
+#info #content h3 {
   font-family: "Roboto Condensed", sans-serif;
-  margin-top: 1.8rem;
-  color: rgba(255, 255, 255, 0.88); }
-
-#info #content strong {
-  color: rgba(255, 255, 255, 0.93); }
+  color: #555b63; }
 
 #info #content ul {
   padding-left: 1.2rem; }
   #info #content ul li {
-    margin-bottom: 0.4rem;
-    color: rgba(255, 255, 255, 0.72); }
+    margin-bottom: 0.5rem;
+    color: #555b63; }
+    #info #content ul li::marker {
+      color: #c49a4f; }
 
 button {
   margin-top: 2rem;
-  padding: 0.8rem 1.6rem;
+  padding: 0.9rem 1.8rem;
   border: none;
   border-radius: 20px;
-  background: #1c2027;
+  background: #eef1f6;
   font-family: "Roboto Condensed", sans-serif;
   font-size: 1rem;
   cursor: pointer;
-  color: rgba(255, 255, 255, 0.88);
-  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.55), -8px -8px 16px rgba(255, 255, 255, 0.06);
+  color: #555b63;
+  letter-spacing: 0.05em;
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.12), -6px -6px 12px rgba(255, 255, 255, 0.9);
   transition: all 0.2s ease; }
   button:hover {
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.55), -4px -4px 10px rgba(255, 255, 255, 0.06); }
+    color: #4b6589;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.12), -3px -3px 6px rgba(255, 255, 255, 0.9); }
   button:active {
-    box-shadow: inset 6px 6px 12px rgba(0, 0, 0, 0.55), inset -6px -6px 12px rgba(255, 255, 255, 0.06); }
+    box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.12), inset -4px -4px 8px rgba(255, 255, 255, 0.9); }
 
 hr {
   margin: 2rem 0;
   border: none;
   height: 2px;
-  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.1), transparent); }
+  background: linear-gradient(to right, transparent, rgba(119, 136, 115, 0.45), transparent); }
 
 #portrait-links {
   display: flex;
@@ -97,17 +109,16 @@ hr {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    background: #1c2027;
+    background: #eef1f6;
     font-size: 1.2rem;
-    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.55), -8px -8px 16px rgba(255, 255, 255, 0.06);
+    color: #5f7ea8;
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.12), -6px -6px 12px rgba(255, 255, 255, 0.9);
     transition: all 0.2s ease; }
     #portrait-links a:hover {
-      box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.55), -4px -4px 10px rgba(255, 255, 255, 0.06); }
+      color: #4e9a94;
+      box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.12), -3px -3px 6px rgba(255, 255, 255, 0.9); }
     #portrait-links a:active {
-      box-shadow: inset 6px 6px 12px rgba(0, 0, 0, 0.55), inset -6px -6px 12px rgba(255, 255, 255, 0.06); }
-
-#portrait-links span {
-  filter: saturate(1.1) brightness(1.05); }
+      box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.12), inset -4px -4px 8px rgba(255, 255, 255, 0.9); }
 
 @media (max-width: 900px) {
   #card {
@@ -121,12 +132,7 @@ hr {
   #portrait img {
     width: 120px;
     height: 120px; }
-  #info #content h1 {
-    font-size: 1.5rem; }
-  #info #content h2 {
-    font-size: 1.25rem; }
   #portrait-links {
     gap: 0.75rem; }
   button {
-    width: 100%;
-    text-align: center; } }
+    width: 100%; } }
