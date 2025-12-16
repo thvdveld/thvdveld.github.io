@@ -1,0 +1,137 @@
+body {
+  font: 120% "Gentium Plus", serif;
+  font-family: "TX-02"; }
+
+h1, h2, h3 {
+  font-family: "Roboto Condensed"; }
+
+h3 {
+  font-weight: 500; }
+
+strong {
+  text-decoration: underline; }
+
+a {
+  color: #778873;
+  text-decoration: underline;
+  transition: color 0.2s; }
+  a:hover {
+    color: #d2dcb6; }
+
+#leftbackground {
+  width: 50%;
+  height: 100vh;
+  background: linear-gradient(-45deg, #778873, #d2dcb6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1; }
+  @media (max-width: 1200px) {
+    #leftbackground {
+      width: 100%; } }
+  @media (max-width: 1000px) {
+    #leftbackground {
+      display: none; } }
+#card {
+  width: 70%;
+  margin: 0 auto;
+  box-shadow: 32px 48px 64px rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: row;
+  align-items: top; }
+  @media (max-width: 1600px) {
+    #card {
+      width: 80%; } }
+  @media (max-width: 1400px) {
+    #card {
+      flex-direction: column;
+      width: 60%; } }
+  @media (max-width: 1000px) {
+    #card {
+      top: 0;
+      left: 0;
+      transform: none;
+      width: 100%;
+      box-shadow: none; } }
+  #card #portrait {
+    width: 35%;
+    padding: 50px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(-45deg, #d2dcb6, #f1f3e0); }
+    @media (max-width: 1400px) {
+      #card #portrait {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around; } }
+    #card #portrait h1 {
+      padding: 30px;
+      font-family: "Roboto Condensed";
+      text-align: center;
+      font-variant: small-caps;
+      font-weight: 100;
+      font-size: 3.5em; }
+    #card #portrait img {
+      border-radius: 50%;
+      display: block;
+      margin: 0 auto;
+      width: 75%;
+      box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.3); }
+      @media (max-width: 1200px) {
+        #card #portrait img {
+          width: 50%;
+          min-width: 150px; } }
+  #card #info {
+    padding: 30px;
+    background-color: white;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    justify-content: space-between; }
+    @media (max-width: 1400px) {
+      #card #info {
+        width: 100%;
+        box-sizing: border-box; } }
+    #card #info #content h1 {
+      margin-top: 0;
+      margin-bottom: 0;
+      font: 100% "Roboto Condensed";
+      font-size: 5em;
+      font-weight: 600; }
+    #card #info #content p {
+      line-height: 1.5em;
+      margin-bottom: 1em; }
+    #card #info button {
+      display: block;
+      background-color: white;
+      width: auto;
+      margin: 0 auto;
+      color: #778873;
+      border: 2px solid #778873;
+      padding: 10px 10px;
+      font-size: 1.2em;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      transition-timing-function: ease-in-out;
+      margin-bottom: 1em;
+      font-variant: small-caps;
+      font-family: "TX-02"; }
+      #card #info button:hover {
+        background-color: #f1f3e0; }
+    #card #info #portrait-links {
+      background-color: white;
+      text-align: center; }
+      #card #info #portrait-links a {
+        margin: 0 20px;
+        color: inherit;
+        text-decoration: none;
+        font-size: 1.5em; }
+        #card #info #portrait-links a:hover {
+          color: #ff6f61; }

@@ -1,0 +1,172 @@
+$color1: #778873
+$color2: #a1bc98
+$color3: #d2dcb6
+$color4: #f1f3e0
+
+$accent-color: #ff6f61
+
+body
+  font: 120% "Gentium Plus", serif
+  font-family: "TX-02"
+
+h1, h2, h3
+  font-family: "Roboto Condensed"
+
+h3
+  font-weight: 500
+
+strong 
+  text-decoration: underline
+
+a
+  color: $color1
+  text-decoration: underline
+  transition: color 0.2s
+
+  &:hover
+    color: $color3
+
+#leftbackground
+  width: 50%
+  height: 100vh
+  background: linear-gradient(-45deg, $color1, $color3)
+  position: fixed
+  top: 0
+  left: 0
+  z-index: -1
+
+  @media (max-width: 1200px)
+    width: 100%
+
+  @media (max-width: 1000px)
+    display: none
+
+#card
+  width: 70%
+
+  margin: 0 auto
+  box-shadow: 32px 48px 64px rgba(0,0,0,0.4)
+
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%,-50%)
+
+  display: flex
+  flex-direction: row
+  align-items: top
+
+  @media (max-width: 1600px)
+    width: 80%
+
+  @media (max-width: 1400px)
+    flex-direction: column
+    width: 60%
+
+  @media (max-width: 1000px)
+    top: 0
+    left: 0
+    transform: none
+    width: 100%
+    box-shadow: none
+  
+  #portrait
+    width: 35%
+    padding: 50px
+    box-sizing: border-box
+    display: flex
+    flex-direction: column
+    align-items: center
+    background: linear-gradient(-45deg, $color3, $color4)
+
+    @media (max-width: 1400px)
+      width: 100%
+      flex-direction: row
+      justify-content: space-around
+
+    // Small caps, thin
+    h1
+      padding: 30px
+      font-family: "Roboto Condensed"
+      text-align: center
+      font-variant: small-caps
+      font-weight: 100
+      font-size: 3.5em
+
+    // Rounded corners for the portrait image
+    // In the middle of the parent
+    img
+      border-radius: 50%
+      display: block
+      margin: 0 auto
+      width: 75%
+      box-shadow: 8px 8px 16px rgba(0,0,0,0.3)
+
+      @media (max-width: 1200px)
+        width: 50%
+        min-width: 150px
+
+  // Info right of the portrait
+  #info
+    padding: 30px
+    background-color: white
+    width: 60%
+
+    // Push links to the bottom
+    display: flex
+    flex-direction: column
+    box-sizing: border-box
+    justify-content: space-between
+
+    @media (max-width: 1400px)
+      width: 100%
+      box-sizing: border-box
+
+    #content
+      h1
+        margin-top: 0
+        margin-bottom: 0
+        font: 100% "Roboto Condensed"
+        font-size: 5em
+        font-weight: 600
+
+      p
+        line-height: 1.5em
+        margin-bottom: 1em
+
+    // Centered button below the paragraph
+    button
+      display: block
+      background-color: white
+      width: auto
+      margin: 0 auto
+      color: $color1
+      border: 2px solid $color1
+      padding: 10px 10px
+      font-size: 1.2em
+      cursor: pointer
+      transition: background-color 0.3s
+      transition-timing-function: ease-in-out
+      margin-bottom: 1em
+      // small caps
+      font-variant: small-caps
+      font-family: "TX-02"
+
+      &:hover
+        background-color: $color4
+
+    // Links to social media profiles underneath the portrait
+    // They are centered horizontally and are <i> 
+    // href when clicked should not have a different color
+    #portrait-links
+      background-color: white
+      text-align: center
+
+      a
+        margin: 0 20px
+        color: inherit
+        text-decoration: none
+        font-size: 1.5em
+
+        &:hover
+          color: $accent-color
