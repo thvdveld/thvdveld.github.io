@@ -5,7 +5,7 @@ html, body {
   margin: 0;
   padding: 0;
   font-family: "JetBrains Mono", serif;
-  background: #eef1f6;
+  background: #f5f6fa;
   color: #2b2f33; }
 
 a {
@@ -24,17 +24,11 @@ strong {
   color: #5f7ea8;
   font-weight: 600; }
 
-#leftbackground {
-  position: fixed;
-  inset: 0;
-  background: linear-gradient(135deg, #f5f6fa, #e4e9f1);
-  z-index: -1; }
-
 #card {
   max-width: 960px;
   margin: 4rem auto;
   padding: 2.5rem;
-  background: #eef1f6;
+  background: #fbfcfd;
   border-radius: 20px;
   box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.12), -6px -6px 12px rgba(255, 255, 255, 0.9); }
 
@@ -46,7 +40,7 @@ strong {
     height: 200px;
     object-fit: cover;
     border-radius: 50%;
-    background: #eef1f6;
+    background: #fbfcfd;
     padding: 8px;
     box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.12), -6px -6px 12px rgba(255, 255, 255, 0.9); }
   #portrait h1 {
@@ -77,7 +71,7 @@ button {
   padding: 0.9rem 1.8rem;
   border: none;
   border-radius: 20px;
-  background: #eef1f6;
+  background: #fbfcfd;
   font-family: "Roboto Condensed", sans-serif;
   font-size: 1rem;
   cursor: pointer;
@@ -109,7 +103,7 @@ hr {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    background: #eef1f6;
+    background: #fbfcfd;
     font-size: 1.2rem;
     color: #5f7ea8;
     box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.12), -6px -6px 12px rgba(255, 255, 255, 0.9);

@@ -1,8 +1,8 @@
 // -----------------------------
 // Light Neumorphism Color System
 // -----------------------------
-$bg: #eef1f6
-$surface: #eef1f6
+$bg: lighten(#eef1f6, 2%)
+$surface: lighten(#eef1f6, 4%)
 
 // Shadows
 $light-shadow: rgba(255, 255, 255, 0.9)
@@ -69,15 +69,6 @@ p
 strong
   color: $accent-secondary
   font-weight: 600
-
-// -----------------------------
-// Background
-// -----------------------------
-#leftbackground
-  position: fixed
-  inset: 0
-  background: linear-gradient(135deg, lighten($bg, 2%), darken($bg, 3%))
-  z-index: -1
 
 // -----------------------------
 // Main Card
