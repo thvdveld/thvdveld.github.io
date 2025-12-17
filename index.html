@@ -12,33 +12,78 @@
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
   </head>
   <div id="card">
+    <div id="language-switch">
+      <button data-lang="nl">nl </button>
+      <button data-lang="en">en </button>
+      <button data-lang="fr">fr</button>
+    </div>
     <div id="portrait"><img src="assets/portrait-resized.webp" alt="Portrait of Thibaut Vandervelden">
       <h1>Thibaut Vandervelden</h1>
     </div>
     <hr>
     <div id="info">
       <div id="content">
-        <h1>Hi!</h1>
-        <p>
+        <h1 data-lang="nl">Hi!</h1>
+        <h1 data-lang="en">Hello!</h1>
+        <h1 data-lang="fr">Salut!</h1>
+        <p data-lang="nl">
           Ik ben Thibaut Vandervelden, een ingenieur en onderzoeker met een expertise in embedded
           systemen, netwerkprotocollen en beveiliging. Tijdens mijn doctoraat aan de Vrije
           Universiteit Brussel heb ik me gespecialiseerd in de ontwikkeling van veilige en performante
-          <strong>IoT</strong>-architecturen, met een focus op <strong>Rust</strong>-gebaseerde netwerkstacks, protocolontwerp en cryptografische toepassingen.
+          <strong>IoT</strong>-architecturen, met een focus op <strong>Rust</strong>-gebaseerde netwerkstacks,
+          protocolontwerp en cryptografische toepassingen.
+        </p>
+        <p data-lang="en">
+          I am Thibaut Vandervelden, an engineer and researcher specializing in embedded systems,
+          network protocols, and security. During my PhD at the Vrije Universiteit Brussel, I focused on
+          designing secure and high-performance <strong>IoT</strong> architectures, with an emphasis on
+          <strong>Rust</strong>-based network stacks, protocol design, and cryptographic applications.
+        </p>
+        <p data-lang="fr">
+          Je suis Thibaut Vandervelden, ingénieur et chercheur spécialisé en systèmes embarqués,
+          protocoles réseau et sécurité. Lors de mon doctorat à la Vrije Universiteit Brussel, je me suis
+          concentré sur la conception d’architectures <strong>IoT</strong> sécurisées et performantes, avec un
+          accent sur les piles réseau basées sur <strong>Rust</strong>, la conception de protocoles et les
+          applications cryptographiques.
         </p>
         <hr>
-        <h2>Ervaring</h2>
-        <h3><a href="https://github.com/smoltcp-rs/smoltcp">smoltcp</a> maintainer</h3>
-        <ul>
+        <h2 data-lang="nl">Ervaring</h2>
+        <h2 data-lang="en">Experience</h2>
+        <h2 data-lang="fr">Expérience</h2>
+        <h3 data-lang="nl"><a href="https://github.com/smoltcp-rs/smoltcp">smoltcp</a> maintainer</h3>
+        <h3 data-lang="en"><a href="https://github.com/smoltcp-rs/smoltcp">smoltcp</a> maintainer</h3>
+        <h3 data-lang="fr"><a href="https://github.com/smoltcp-rs/smoltcp">smoltcp</a> maintainer</h3>
+        <ul data-lang="nl">
           <li>Rust netwerkstack voor embedded systemen</li>
           <li>Expertise in IPv4/IPv6, UDP/TCP, 6LoWPAN, RPL, SCHC, ...</li>
         </ul>
-        <h3>Doctoraarsonderzoeker aan de Vrije Universiteit Brussel</h3>
-        <ul>
+        <ul data-lang="en">
+          <li>Rust network stack for embedded systems</li>
+          <li>Expertise in IPv4/IPv6, UDP/TCP, 6LoWPAN, RPL, SCHC, ...</li>
+        </ul>
+        <ul data-lang="fr">
+          <li>Pile réseau Rust pour systèmes embarqués</li>
+          <li>Expertise en IPv4/IPv6, UDP/TCP, 6LoWPAN, RPL, SCHC, ...</li>
+        </ul>
+        <h3 data-lang="nl">Doctoraarsonderzoeker aan de Vrije Universiteit Brussel</h3>
+        <h3 data-lang="en">PhD Researcher at the Vrije Universiteit Brussel</h3>
+        <h3 data-lang="fr">Chercheur doctorant à la Vrije Universiteit Brussel</h3>
+        <ul data-lang="nl">
           <li>Onderzoeksprojecten in cryptografie, netwerkprotocollen en embedded systemen</li>
           <li>Onderwijs in programmeren, elektronica en wiskunde</li>
         </ul>
+        <ul data-lang="en">
+          <li>Research projects in cryptography, network protocols, and embedded systems</li>
+          <li>Teaching programming, electronics, and mathematics</li>
+        </ul>
+        <ul data-lang="fr">
+          <li>Projets de recherche en cryptographie, protocoles réseau et systèmes embarqués</li>
+          <li>Enseignement de la programmation, de l’électronique et des mathématiques</li>
+        </ul>
       </div>
-      <button onclick="window.location.href='assets/cv-thibaut-vandervelden-nl.pdf'">CURRICULUM VITAE</button>
+      <button data-lang="nl" onclick="window.location.href='assets/cv-thibaut-vandervelden-nl.pdf'">CURRICULUM VITAE</button>
+      <button data-lang="en" onclick="window.location.href='assets/cv-thibaut-vandervelden-nl.pdf'">CURRICULUM VITAE</button>
+      <button data-lang="fr" onclick="window.location.href='assets/cv-thibaut-vandervelden-nl.pdf'">CURRICULUM VITAE</button>
       <hr>
       <p>
          Contact me
@@ -47,4 +92,24 @@
       <div id="portrait-links"><a href="https://linkedin.com/in/thvdveld/"><span class="fa-brands fa-linkedin" style="color:#0072b1;"></span></a><a href="https://gitlab.com/thvdveld"><span class="fa-brands fa-gitlab" style="color:#fc6d27;"></span></a><a href="https://github.com/thvdveld"><span class="fa-brands fa-github" style="color:#181717;"></span></a><a href="https://scholar.google.com/citations?user=Bxk7mo4AAAAJ&amp;hl=nl"><span class="fa-brands fa-google-scholar" style="color:#4285F4;"></span></a><a href="https://www.researchgate.net/profile/Thibaut-Vandervelden-2"><span class="fa-brands fa-researchgate" style="color:#3EBB9C;"></span></a></div>
     </div>
   </div>
+  <script>
+    const buttons = document.querySelectorAll('#language-switch button');
+    // Only translatable content, NOT the switch buttons
+    const elements = document.querySelectorAll('[data-lang]:not(#language-switch button)');
+    
+    function setLanguage(lang) {
+      elements.forEach(el => {
+        el.style.display = el.dataset.lang === lang ? '' : 'none';
+      });
+      localStorage.setItem('lang', lang);
+      document.documentElement.lang = lang;
+    }
+    
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
+    });
+    
+    const savedLang = localStorage.getItem('lang') || 'nl';
+    setLanguage(savedLang);
+  </script>
 </html>
