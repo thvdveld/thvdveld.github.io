@@ -5,12 +5,12 @@ html, body {
   margin: 0;
   padding: 0;
   font-family: "JetBrains Mono", serif;
-  background: #f5f6fa;
+  background: #eef1f6;
   color: #2b2f33; }
 
 a {
   color: #c49a4f;
-  text-decoration: none;
+  text-decoration: underline;
   transition: color 0.1s; }
   a:hover {
     color: #4e6a90;
@@ -100,6 +100,7 @@ hr {
     width: 44px;
     height: 44px;
     display: flex;
+    text-decoration: none;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
