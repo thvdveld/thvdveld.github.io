@@ -15,11 +15,15 @@ html(lang="en")
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 
   #card
-    #language-switch
-      button(data-lang="nl") nl 
-      button(data-lang="en") en 
-      button(data-lang="fr") fr
+    #top-controls
+      #language-switch
+        button(data-lang="nl" aria-label="Switch language to Dutch") nl
+        button(data-lang="en" aria-label="Switch language to English") en
+        button(data-lang="fr" aria-label="Switch language to French") fr
 
+        label.theme-toggle(for="theme-toggle")
+          input#theme-toggle(type="checkbox" aria-label="Toggle dark mode")
+          span.theme-slider
 
     #portrait
       img(src="assets/portrait-resized.webp", alt="Portrait of Thibaut Vandervelden")
@@ -107,23 +111,26 @@ html(lang="en")
 
       #portrait-links
         a(href="https://linkedin.com/in/thvdveld/")
-         span.fa-brands.fa-linkedin(style="color:#0072b1;")
+         span.fa-brands.fa-linkedin
 
         a(href="https://gitlab.com/thvdveld")
-          span.fa-brands.fa-gitlab(style="color:#fc6d27;")
+          span.fa-brands.fa-gitlab
 
         a(href="https://github.com/thvdveld")
-          span.fa-brands.fa-github(style="color:#181717;")
+          span.fa-brands.fa-github
 
         a(href="https://scholar.google.com/citations?user=Bxk7mo4AAAAJ&hl=nl")
-          span.fa-brands.fa-google-scholar(style="color:#4285F4;")
+          span.fa-brands.fa-google-scholar
 
         a(href="https://www.researchgate.net/profile/Thibaut-Vandervelden-2")
-          span.fa-brands.fa-researchgate(style="color:#3EBB9C;")
+          span.fa-brands.fa-researchgate
 
 
   script.
-    const buttons = document.querySelectorAll('#language-switch button');
+    // ---------------------------
+    // Language switching
+    // ---------------------------
+    const buttons = document.querySelectorAll('#language-switch button[data-lang]');
     // Only translatable content, NOT the switch buttons
     const elements = document.querySelectorAll('[data-lang]:not(#language-switch button)');
   
@@ -141,3 +148,46 @@ html(lang="en")
   
     const savedLang = localStorage.getItem('lang') || 'nl';
     setLanguage(savedLang);
+
+    // ---------------------------
+    // Theme switching (light/dark)
+    // ---------------------------
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeMeta = document.querySelector('meta[name="theme-color"]');
+
+    function applyTheme(theme) {
+      // theme: 'light' | 'dark'
+      document.documentElement.dataset.theme = theme;
+      localStorage.setItem('theme', theme);
+
+      // Update slider state
+      if (themeToggle) themeToggle.checked = theme === 'dark';
+
+      // Update browser UI theme-color to match current theme
+      if (themeMeta) {
+        themeMeta.setAttribute('content', theme === 'dark' ? '#1a2029' : '#eef1f6');
+      }
+    }
+
+    function getInitialTheme() {
+      const saved = localStorage.getItem('theme');
+      if (saved === 'light' || saved === 'dark') return saved;
+      return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        ? 'dark'
+        : 'light';
+    }
+
+    const initialTheme = getInitialTheme();
+    applyTheme(initialTheme);
+
+    if (themeToggle) {
+      themeToggle.addEventListener('change', () => {
+        applyTheme(themeToggle.checked ? 'dark' : 'light');
+      });
+    }
+
+    // If the user has not chosen a theme yet, follow OS changes
+    if (!localStorage.getItem('theme') && window.matchMedia) {
+      const mql = window.matchMedia('(prefers-color-scheme: dark)');
+      mql.addEventListener('change', (e) => applyTheme(e.matches ? 'dark' : 'light'));
+    }
