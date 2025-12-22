@@ -135,7 +135,8 @@ hr {
 
 #language-switch {
   display: flex;
-  gap: 0.5rem; }
+  gap: 0.5rem;
+  margin-bottom: 2rem; }
   #language-switch button {
     font-size: 0.8rem;
     padding: 0.6rem 1.2rem; }
