@@ -3,50 +3,103 @@ html(lang="en")
   head
     title="Thibaut Vandervelden"
     meta(charset="UTF-8")
-    meta(name="theme-color", content="#778873")
+    meta(name="theme-color", content="#eef1f6")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(name="description", content="Personal website of Thibaut Vandervelden, an engineer and researcher specializing in embedded systems, network protocols, and security.")
 
     link(rel="stylesheet", href="styles.css")
     script(src="https://kit.fontawesome.com/90cce51829.js", crossorigin="anonymous")
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Gentium+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 
-  #leftbackground
-    
   #card
+    #top-controls
+      #language-switch
+        button(data-lang="nl" aria-label="Switch language to Dutch") nl
+        button(data-lang="en" aria-label="Switch language to English") en
+        button(data-lang="fr" aria-label="Switch language to French") fr
+
+        label.theme-toggle(for="theme-toggle")
+          input#theme-toggle(type="checkbox" aria-label="Toggle dark mode")
+          span.theme-slider
+
     #portrait
-      img(src="assets/portrait.webp", alt="Portrait of Thibaut Vandervelden")
+      img(src="assets/portrait-resized.webp", alt="Portrait of Thibaut Vandervelden")
       h1 Thibaut Vandervelden
+
+    hr
 
     #info
       #content
-        h1 Hi!
+        h1(data-lang="nl") Hi!
+        h1(data-lang="en") Hello!
+        h1(data-lang="fr") Salut!
 
-        p
-         |Ik ben Thibaut Vandervelden, een ingenieur en onderzoeker met een expertise in embedded
-         |systemen, netwerkprotocollen en beveiliging. Tijdens mijn doctoraat aan de Vrije
-         |Universiteit Brussel heb ik me gespecialiseerd in de ontwikkeling van veilige en performante
-         |<strong>IoT</strong>-architecturen, met een focus op <strong>Rust</strong>-gebaseerde netwerkstacks, protocolontwerp en cryptografische toepassingen.
+        p(data-lang="nl")
+         | Ik ben Thibaut Vandervelden, een ingenieur en onderzoeker met een expertise in embedded
+         | systemen, netwerkprotocollen en beveiliging. Tijdens mijn doctoraat aan de Vrije
+         | Universiteit Brussel heb ik me gespecialiseerd in de ontwikkeling van veilige en performante
+         | <strong>IoT</strong>-architecturen, met een focus op <strong>Rust</strong>-gebaseerde netwerkstacks,
+         | protocolontwerp en cryptografische toepassingen.
+
+        p(data-lang="en")
+         | I am Thibaut Vandervelden, an engineer and researcher specializing in embedded systems,
+         | network protocols, and security. During my PhD at the Vrije Universiteit Brussel, I focused on
+         | designing secure and high-performance <strong>IoT</strong> architectures, with an emphasis on
+         | <strong>Rust</strong>-based network stacks, protocol design, and cryptographic applications.
+
+        p(data-lang="fr")
+         | Je suis Thibaut Vandervelden, ingénieur et chercheur spécialisé en systèmes embarqués,
+         | protocoles réseau et sécurité. Lors de mon doctorat à la Vrije Universiteit Brussel, je me suis
+         | concentré sur la conception d’architectures <strong>IoT</strong> sécurisées et performantes, avec un
+         | accent sur les piles réseau basées sur <strong>Rust</strong>, la conception de protocoles et les
+         | applications cryptographiques.
+
+        hr
  
-        h2 Ervaring
+        h2(data-lang="nl") Ervaring
+        h2(data-lang="en") Experience
+        h2(data-lang="fr") Expérience
 
-        h3
+        h3(data-lang="nl")
+         a(href="https://github.com/smoltcp-rs/smoltcp") smoltcp
+         |  maintainer
+        h3(data-lang="en")
+         a(href="https://github.com/smoltcp-rs/smoltcp") smoltcp
+         |  maintainer
+        h3(data-lang="fr")
          a(href="https://github.com/smoltcp-rs/smoltcp") smoltcp
          |  maintainer
 
-        ul
+        ul(data-lang="nl")
           li Rust netwerkstack voor embedded systemen
           li Expertise in IPv4/IPv6, UDP/TCP, 6LoWPAN, RPL, SCHC, ...
+        ul(data-lang="en")
+          li Rust network stack for embedded systems
+          li Expertise in IPv4/IPv6, UDP/TCP, 6LoWPAN, RPL, SCHC, ...
+        ul(data-lang="fr")
+          li Pile réseau Rust pour systèmes embarqués
+          li Expertise en IPv4/IPv6, UDP/TCP, 6LoWPAN, RPL, SCHC, ...
 
-        h3 Doctoraarsonderzoeker aan de Vrije Universiteit Brussel
+        h3(data-lang="nl") Doctoraarsonderzoeker aan de Vrije Universiteit Brussel
+        h3(data-lang="en") PhD Researcher at the Vrije Universiteit Brussel
+        h3(data-lang="fr") Chercheur doctorant à la Vrije Universiteit Brussel
         
-        ul
+        ul(data-lang="nl")
           li Onderzoeksprojecten in cryptografie, netwerkprotocollen en embedded systemen
           li Onderwijs in programmeren, elektronica en wiskunde
+        ul(data-lang="en")
+          li Research projects in cryptography, network protocols, and embedded systems
+          li Teaching programming, electronics, and mathematics
+        ul(data-lang="fr")
+          li Projets de recherche en cryptographie, protocoles réseau et systèmes embarqués
+          li Enseignement de la programmation, de l’électronique et des mathématiques
 
-      button(onclick="window.location.href='assets/cv-thibaut-vandervelden-nl.pdf'") CURRICULUM VITAE
+      button(data-lang="nl", onclick="window.location.href='assets/cv-thibaut-vandervelden-nl.pdf'") CURRICULUM VITAE
+      button(data-lang="en", onclick="window.location.href='assets/cv-thibaut-vandervelden-nl.pdf'") CURRICULUM VITAE
+      button(data-lang="fr", onclick="window.location.href='assets/cv-thibaut-vandervelden-nl.pdf'") CURRICULUM VITAE
 
       hr
 
@@ -58,17 +111,123 @@ html(lang="en")
 
       #portrait-links
         a(href="https://linkedin.com/in/thvdveld/")
-         span.fa-brands.fa-linkedin(style="color:#0072b1;")
+         span.fa-brands.fa-linkedin
 
         a(href="https://gitlab.com/thvdveld")
-          span.fa-brands.fa-gitlab(style="color:#fc6d27;")
+          span.fa-brands.fa-gitlab
 
         a(href="https://github.com/thvdveld")
-          span.fa-brands.fa-github(style="color:#181717;")
+          span.fa-brands.fa-github
 
         a(href="https://scholar.google.com/citations?user=Bxk7mo4AAAAJ&hl=nl")
-          span.fa-brands.fa-google-scholar(style="color:#4285F4;")
+          span.fa-brands.fa-google-scholar
 
         a(href="https://www.researchgate.net/profile/Thibaut-Vandervelden-2")
-          span.fa-brands.fa-researchgate(style="color:#3EBB9C;")
+          span.fa-brands.fa-researchgate
 
+  #card
+    #portrait
+      h1(data-lang="nl") Wetenschappelijke Publicaties
+      h1(data-lang="en") Scientific Publications
+      h1(data-lang="fr") Publications Scientifiques
+    
+    hr
+
+    #info
+      #content
+        ul 
+          li
+            #publication
+              span.pubtitle Overview of embedded Rust Operating Systems and Frameworks
+              p.authors <strong>T. Vandervelden</strong>, R. De Smet, D. Deac, K. Steenhaut & A. Braeken
+          li
+            #publication
+              span.pubtitle Evaluation of 6LoWPAN Generic Header Compression in the Context of a RPL Network
+              p.authors <strong>T. Vandervelden</strong>, D. Deac, R. Van Glabbeek, R. De Smet, A. Braeken & K. Steenhaut
+
+          li
+            #publication
+              span.pubtitle SHA3 and Keccak variants computation speeds on constrained devices
+              p.authors <strong>T. Vandervelden</strong>, R. De Smet, K. Steenhaut & A. Braeken
+
+          li
+            #publication
+              span.pubtitle Circuitree: A Datalog Reasoner in Zero-Knowledge
+              p.authors T. Godden, R. De Smet, C. Debruyne, <strong>T. Vandervelden</strong>, K. Steenhaut & A. Braeken
+          
+          li
+            #publication
+              span.pubtitle Symmetric-key-based authentication among the nodes in a WSAN
+              p.authors <strong>T. Vandervelden</strong>, R. De Smet, K. Steenhaut & A. Braeken
+
+          li
+            #publication
+              span.pubtitle Lightweight PUF based authentication scheme for fog architecture
+              p.authors R. De Smet, <strong>T. Vandervelden</strong>, K. Steenhaut & A. Braeken
+
+
+  script.
+    // ---------------------------
+    // Language switching
+    // ---------------------------
+    const buttons = document.querySelectorAll('#language-switch button[data-lang]');
+    // Only translatable content, NOT the switch buttons
+    const elements = document.querySelectorAll('[data-lang]:not(#language-switch button)');
+  
+    function setLanguage(lang) {
+      elements.forEach(el => {
+        el.style.display = el.dataset.lang === lang ? '' : 'none';
+      });
+      localStorage.setItem('lang', lang);
+      document.documentElement.lang = lang;
+    }
+  
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
+    });
+  
+    const savedLang = localStorage.getItem('lang') || 'nl';
+    setLanguage(savedLang);
+
+    // ---------------------------
+    // Theme switching (light/dark)
+    // ---------------------------
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeMeta = document.querySelector('meta[name="theme-color"]');
+
+    function applyTheme(theme) {
+      // theme: 'light' | 'dark'
+      document.documentElement.dataset.theme = theme;
+      localStorage.setItem('theme', theme);
+
+      // Update slider state
+      if (themeToggle) themeToggle.checked = theme === 'dark';
+
+      // Update browser UI theme-color to match current theme
+      if (themeMeta) {
+        themeMeta.setAttribute('content', theme === 'dark' ? '#1a2029' : '#eef1f6');
+      }
+    }
+
+    function getInitialTheme() {
+      const saved = localStorage.getItem('theme');
+      if (saved === 'light' || saved === 'dark') return saved;
+      return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        ? 'dark'
+        : 'light';
+    }
+
+    const initialTheme = getInitialTheme();
+    applyTheme(initialTheme);
+
+    if (themeToggle) {
+      themeToggle.addEventListener('change', () => {
+        applyTheme(themeToggle.checked ? 'dark' : 'light');
+      });
+    }
+
+    // If the user has not chosen a theme yet, follow OS changes
+    if (!localStorage.getItem('theme') && window.matchMedia) {
+      const mql = window.matchMedia('(prefers-color-scheme: dark)');
+      mql.addEventListener('change', (e) => applyTheme(e.matches ? 'dark' : 'light'));
+    }
